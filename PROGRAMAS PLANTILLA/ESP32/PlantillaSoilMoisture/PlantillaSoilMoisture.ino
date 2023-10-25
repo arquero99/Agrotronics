@@ -3,11 +3,11 @@
 #include <Arduino.h>
 
 #define ANALOGPIN 35  //Cambiar or pin
-#define WIFI_SSID "Arvi"
-#define WIFI_PWD "12345678"
+#define WIFI_SSID ""
+#define WIFI_PWD ""
 
 #define TB_SERVER "thingsboard.cloud"
-#define TB_DEVICE_TOKEN "yiPWW0pek0ojx3MbOeUB"
+#define TB_DEVICE_TOKEN "" //TOKEN AQUÍ
 
 void InitWiFi();
 void printLogs();
