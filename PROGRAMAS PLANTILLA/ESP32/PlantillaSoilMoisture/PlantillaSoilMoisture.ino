@@ -1,13 +1,19 @@
-#include <Arduino.h>
 #include <WiFi.h>           // WiFi control for ESP32
 #include "ThingsBoard.h"    // ThingsBoard SDK
+#include <Arduino.h>
 
-#define ANALOGPIN 1//Cambiar or pin
+#define ANALOGPIN 35  //Cambiar or pin
 #define WIFI_SSID ""
 #define WIFI_PWD ""
 
 #define TB_SERVER "thingsboard.cloud"
-#define TB_DEVICE_TOKEN ""
+#define TB_DEVICE_TOKEN "" //TOKEN AQUÍ
+
+void InitWiFi();
+void printLogs();
+void reconnect();
+void connectIoT();
+void sendData();
 
 
 WiFiClient espClient;
@@ -17,12 +23,13 @@ bool subscribed = false;
 
 float latitude=0.0;
 float longitude=0.0;
-int analogValue;
+int analogValue=1023;
 
 
 void setup() {
   latitude = 38.78311;
   longitude = -3.04394;
+  pinMode(ANALOGPIN, INPUT);
   analogValue=analogRead(ANALOGPIN);
   Serial.begin(9600);
   WiFi.begin(WIFI_SSID,WIFI_PWD);
@@ -32,10 +39,10 @@ void setup() {
 
 void loop() {
 connectIoT();
-
+analogValue=analogRead(ANALOGPIN);
 sendData();
 printLogs();
-delay(60000);
+delay(5000);
 }
 
 
@@ -50,9 +57,8 @@ void printLogs(){
     Serial.print(longitude);
     Serial.print("º");
     Serial.println();
-    Serial.print("Valor Analog (0-1023): ");
+    Serial.print("Valor Analog: ");
     Serial.print(analogValue);
-    Serial.print("bar");
 }
 
 void InitWiFi()

@@ -29,7 +29,8 @@ Vamos a abrir el primer programa de ejemplo para la placa Arduino.
 Para ello, dentro del IDE ir a Archivo > Ejemplos > Basics > Blink.
 Apreciar como se abre una nueva pestaña con el programa seleccionado. No hacer mucho caso al código, no es de gran importancia en este momento.
 Este programa encenderá y apagará un led incluido en el Arduino cerca del puerto Digital 13.
-![UploadButton](/imgs/blink.png)
+
+![UploadButton](/imgs/blink.PNG)
 
 ## 5. Seleccionar placa y Puerto
 Queremos subir el programa a la placa Arduino.
@@ -37,13 +38,15 @@ Para ello tenemos que seleccionar la placa Arduino sobre la que queremos subir e
 Ir a Herramientas > Placa  y seleccionar Arduino Uno (En caso de que estuviésemos trabajando con otra placa aquí seleccionamos el modelo)
 En Herramientas > Puerto seleccionar el puerto asociado a la arduino (COM x)
 En ocasiones no podemos saber facilmente que puerto COM está asociado a nuestra Arduino. Un pequeño truco es conectar y desconectar la placa, fijándonos en que puerto COM aparece y desaparece.
-![UploadButton](/imgs/placa.png)
+
+![UploadButton](/imgs/placa.PNG)
 
 ## 6. Subir primer programa.
 Vamos subir el programa a la placa Arduino que hemos seleccionado. Para ello deberemos pulsar sobre el botón "Subir", en la parte superior izquierda del IDE.
 Los leds Rx y TX del Arduino se pondrán a parpadear, y tras unos segundos parecerá el mensaje "Done uploading" en la barra de estado inferior del IDE.
 El programa empezará a funcionar, y como podrás apreciar, el led cercano al puerto D13 se pondrá a parpadear. Enhorabuena! Acabas de lanzar tu primer programa Arduino.
-![UploadButton](/imgs/uploadArd.png)
+
+![UploadButton](/imgs/uploadArd.PNG)
 
 ## 7.Primera conexión con sensores. DS18B20
 El sensor DS18B20 es un sensor de temperatura digital de alta precisión que se utiliza ampliamente en diferentes aplicaciones, incluida la agricultura. Este sensor utiliza la tecnología de sensor de temperatura de tipo "1-Wire", lo que significa que se puede comunicar con una interfaz digital utilizando solo un cable de datos. Además tiene protección IP68.
